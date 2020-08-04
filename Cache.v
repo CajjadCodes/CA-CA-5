@@ -119,14 +119,14 @@ output HMbar;
 		end
 	endgenerate
 
+	wire Tag_equal;
 	Comparator_3bit Tag_comparator(
 		.A(TagInBus),
 		.B(TagOutBus),
 		.equal(Tag_equal)
 	);
 
-	assign Valid = VOutBus;
-	assign HMbar = Valid & Tag_equal;
+	assign HMbar = VOutBus & Tag_equal;
 
 	Mux4to1_32bit(
 		.inp0(W0OutBus),
