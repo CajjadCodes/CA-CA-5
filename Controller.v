@@ -10,13 +10,13 @@ output DataSelect;
 output DataReady;
 
 	wire DataReadySel;
-	StateMAchine SM(
+	StateMachine SM(
 		.clk(clk),
 		.rst(rst),
 		.MemRead(MemRead),
 		.HMbar(HMbar),
 		.MMDataReady(MMDataReady),
-		.MMREad(MMRead),
+		.MMRead(MMRead),
 		.CacheWrite(CacheWrite),
 		.DataSelect(DataSelect),
 		.DataReadySel(DataReadySel)
