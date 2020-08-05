@@ -26,7 +26,7 @@ output reg DataReadySel;
 		{MMRead, CacheWrite, DataSelect, DataReadySel} = 4'b0000;
 		case(ps)
 			//no change for CACHE_READ
-			WAIT_FOR_MAIN_MEMORY : MMRead = 1'b1;
+			WAIT_FOR_MAIN_MEMORY : {MMRead, DataSelect} = 2'b11;
 			WRITE_TO_CACHE_AND_SEND_DATA : {CacheWrite, DataSelect, DataReadySel} = 3'b111;
 			default : {MMRead, CacheWrite, DataSelect, DataReadySel} = 4'b0000;
 		endcase
