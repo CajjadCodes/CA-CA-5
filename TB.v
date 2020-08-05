@@ -54,6 +54,7 @@ module TB();
 		
 		$display("Total Hits: %d", total_hits);
 		$display("Total Misses: %d", total_miss);
+		$display("Hit Rate: %d", 100*total_hits/(total_hits+total_miss),"%%");
 		
 		$stop;
 	end
