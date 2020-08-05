@@ -6,7 +6,7 @@ input en;
 output reg [2:0] q;
 	
 	always @(posedge clk or posedge rst) begin
-		if (rst) q <= 3'b0;
+		if (rst) q <= 3'bz;
 		else if (en) q <= d;
 	end
 
