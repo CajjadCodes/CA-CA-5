@@ -11,6 +11,7 @@ output reg [127:0] dataBlock;
 
 	always @(posedge read) begin
 		dataReady = 1'b0;
+		data = 32'bz;
 		#150
 		data = main_memory[address];
 		dataBlock = {main_memory[{address[14:2],2'b11}], main_memory[{address[14:2],2'b10}],
