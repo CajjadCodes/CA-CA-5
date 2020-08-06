@@ -22,7 +22,7 @@ output reg [127:0] dataBlock;
 	integer i;
 	initial begin
 		for (i = 0; i < 32767; i = i + 1) begin
-			main_memory[i] = 32'b11;
+			main_memory[i] = $random;
 
 		end
 	end

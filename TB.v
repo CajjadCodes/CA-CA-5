@@ -7,7 +7,7 @@ module TB();
 	wire [31:0] data;
 	wire DataReady, HMbar;
 
-	reg [31:0] read_datas [0:8192];
+	reg [31:0] read_datas [0:8191];
 
 	integer CycleNum = 0;
 	always #23 clk = ~clk;
